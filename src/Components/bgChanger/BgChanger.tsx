@@ -3,13 +3,36 @@ import { Slider } from '@mui/material';
 import Button from 'react-bootstrap/Button';
 import "./bgChanger.css";
 import { publishEvent } from "@crestron/ch5-crcomlib";  
-//join number function takes 3 parameters 
+import {
+    bridgeReceiveIntegerFromNative,
+    bridgeReceiveBooleanFromNative,
+    bridgeReceiveStringFromNative,
+    bridgeReceiveObjectFromNative,
+} from "@crestron/ch5-crcomlib";
+//JOIN NUMBERS PASSED IN TO THIS FUNCTION publishEvent()
 //format: CrComLib.publishEvent(type, signalName, value) 
+//function takes 3 parameters 
+
 //Types are: 
 //'b' or 'boolean 
 //'n', 'numeric' or 'number': Indicates the value will be a 16-bit integer number between the values of 0 to 65,535 or -32,768 to 32,767 (like an Analog Join)
 //'s' or 'string': Indicates the value will be a string(like a serial join)
 // 'o' or 'object': Indicates the value will be an object. Reserved for future use.
+
+//signalName is a string parameter that is either a string representation of a join number or Contract Editor signal name. 
+//format: const signalName = "11" //join number 11
+
+//value is a type as described by the type parameter
+//examples:true/false, "11", "any string" 
+
+(window as any)["bridgeReceiveIntegerFromNative"] =
+bridgeReceiveIntegerFromNative;
+(window as any)["bridgeReceiveBooleanFromNative"] =
+bridgeReceiveBooleanFromNative;
+(window as any)["bridgeReceiveStringFromNative"] =
+bridgeReceiveStringFromNative;
+(window as any)["bridgeReceiveObjectFromNative"] =
+bridgeReceiveObjectFromNative;
 
 function BgChanger() {
 
