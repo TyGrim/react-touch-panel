@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Slider } from '@mui/material';
 import Button from 'react-bootstrap/Button';
+import "./bgChanger.css";
 
 
 function BgChanger() {

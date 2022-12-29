@@ -1,6 +1,15 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Typescript in use.
+
+1st Step-- git clone file to desired local directory.
+
+2nd-- in terminal use command for install with yarn.
+$ yarn install 
+or
+$ yarn 
+(Running yarn with no command will run yarn install, passing through any provided flags.)
 
 ## Available Scripts
 

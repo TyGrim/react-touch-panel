@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BgChanger from './Components/BgChanger';
+import BgChanger from './Components/bgChanger/BgChanger';
 
 
 
